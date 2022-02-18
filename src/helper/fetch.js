@@ -1,5 +1,7 @@
-const url = 'https://api.datos.gob.mx/v1/condiciones-atmosfericas';
+const baseUrl = 'https://api.datos.gob.mx/v1/condiciones-atmosfericas';
 
-const fetch = (method = 'GET') => {
-    return fetch( url );
+export const Fetch = (endpoint) => {
+    const url = `${ baseUrl }/${ endpoint }`;
+
+    return fetch(url);
 }

@@ -1,0 +1,20 @@
+@import 'variables';
+
+.description {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+
+    &__grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        border: 1px solid $primary;
+        background-image: linear-gradient(to bottom, $primary 0%, $primary 50%, lighten($primary, 20%) 50%, lighten($primary, 20%) 100%);
+    }
+
+    &__target {
+        color: rgb(31, 27, 27);
+    }
+}

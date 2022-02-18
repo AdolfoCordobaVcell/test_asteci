@@ -1,10 +1,15 @@
 import {types} from '../types/types';
 
-export const reducer = (state = {}, action) => {
+const initialState = {
+    event: [],
+}
+
+export const start = (state = initialState, action) => {
     switch (action.type) {
         case types.start:
             return {
-
+                ...state,
+                event: action.payload
             }
 
         default: 

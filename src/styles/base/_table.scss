@@ -1,5 +1,60 @@
-$primary: blue;
+@import 'variables';
 
-.tabla {
+.table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+
+    &__thead {
+        background-color: $primary;
+    }
+
+    &__th {
+        padding: 2rem 0;
+    }
+
+    &__tr {
+        cursor: pointer;
+        
+        &:nth-child(odd) {
+            background-color: lighten($primary, 25%);
+        }
+    }
+
+    &__td {
+        padding: 1rem .2rem;
+        border: 1px solid $primary;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    border-left: 1px solid $primary;
+    border-right: 1px solid $primary;
+
+    &__btn {
+        border: none;
+        background-color: lighten($primary, 10%);
+        border-radius: 1rem;
+        padding: 10px 20px;
+        cursor: pointer;
+        
+        &:hover {
+            background-color: darken($primary, 20%);
+        }
+
+        &--sig {
+            background-color: darken($primary, 10%);
+        }
+    }
+}
+
+.total {
+    display: flex;
+    justify-content: space-around;
     background-color: $primary;
+    padding: 10px 0;
+    color: white;
 }

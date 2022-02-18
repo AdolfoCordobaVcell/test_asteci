@@ -1,3 +1,4 @@
 export const types = {
-    start: '[start] starting..'
+    start: '[start] starting..',
+    open: '[modal] open description'
 }
